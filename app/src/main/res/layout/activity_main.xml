@@ -48,4 +48,12 @@
         android:layout_below="@id/share_to_qq"
         android:layout_marginTop="10dp"
         android:text="分享到空间"/>
+    <TextView
+        android:id="@+id/show_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/share_to_qzone"
+        android:text="1111111111111"
+        android:layout_marginTop="5dp"
+        />
 </RelativeLayout>

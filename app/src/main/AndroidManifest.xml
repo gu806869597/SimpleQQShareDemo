@@ -36,30 +36,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mob.tools.MobUIShell"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize" >
-            <!--
-                如果集成QQ分享，或者使用QQ客户端来进行QQ空间的
-                分享，须要在此处添加一个对ACTION_VIEW事件的过滤器，
-                其中的scheme是“tencent”前缀再开发者应用的加上appId。
-                如果此过滤器不设置，则分享结束以后不能得到正确的回调
-                -->
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true"
+            android:launchMode="singleTask" >
             <intent-filter>
-                <data android:scheme="1105524022" />
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="222222" />    <!-- 此处填写你在QQ开放平台的Key -->
             </intent-filter>
         </activity>
-        <activity
-            android:name="cn.sharesdk.demo.wxapi.WXEntryActivity"
+        <activity android:name="com.tencent.connect.common.AssistActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:screenOrientation="portrait" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            />
     </application>
 
 </manifest>
